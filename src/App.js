@@ -2,8 +2,15 @@ import { Component } from "react";
 import "./App.css";
 
 function App() {
+  const items = [
+    { item: 'Phone', price: 5000 },
+    { item: 'Laptop', price: 95000 },
+    { item: 'Tablet', price: 15000 }
+  ];
   return (
+  
     <div className="App">
+      {items.map(item => <h3>{item.item} - {item.price}tk</h3>)}
       <h1>Hello, React </h1>
       <div className="card">
         <h2>Riyad Hossain</h2>
@@ -47,3 +54,6 @@ function Friend(props) {
     </div>
   );
 }
+
+
+// Component 3 
