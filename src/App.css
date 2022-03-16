@@ -15,3 +15,12 @@
   font-weight: 350;
   color: rgb(77, 75, 75);
 }
+
+.btn{
+  padding: 10px 20px;
+  outline: none;
+  font-size: 19px;
+  background-color: deepskyblue;
+  border: none;
+  border-radius: 5px;
+}

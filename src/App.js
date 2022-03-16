@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
         <People name="Riyad Hossain"></People>
         <Friend user="Riyad" phone="01703790978"></Friend>
       </div>
+      <Counter></Counter>
     </div>
   );
 }
@@ -57,3 +58,13 @@ function Friend(props) {
 
 
 // Component 3 
+function Counter() {
+  const [count, setCount] = useState(0)
+  const handleIncrease = () => setCount(count+1)
+  const handleDecrease = () => setCount(count-1)
+  return (<div>
+    <h1>Count: { count}</h1>
+    <button className="btn" style={{marginRight:"15px"}} onClick={handleIncrease}>Increase</button>
+    <button className="btn" onClick={handleDecrease}>Decrease</button>
+  </div>)
+}
